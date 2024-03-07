@@ -1,47 +1,36 @@
-# Learning template [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://github.com/hchiam/learning-template/blob/main/LICENSE)
+# Learning privateGPT
 
 Just one of the things I'm learning. https://github.com/hchiam/learning
 
-(To use this template fast with [`gh` CLI](https://github.com/hchiam/learning-gh), you can run [`gh repo create --template learning-template learning-...`](https://cli.github.com/manual/gh_repo_create) or [set up a custom shortcut CLI command](https://github.com/hchiam/learning-bash-scripts/blob/main/gh-cli-create-learning-repo-from-template.sh).)
+https://github.com/imartinez/privateGPT
 
-(To create a convenience script repo, use this template instead: https://github.com/hchiam/convenience)
+https://docs.privategpt.dev/overview/welcome/quickstart
 
-(To create a website fast, use a code generator like [`create-next-app`](https://github.com/hchiam/learning-nextjs), [`sapper`](https://github.com/hchiam/learning-sapper), a [svelte template](https://github.com/sveltejs/template), [`yo`](https://yeoman.io/generators), or my [project-template](https://github.com/hchiam/project-template))
+https://docs.privategpt.dev/api-reference/overview/api-reference-overview
 
-(Use the redirect template https://github.com/hchiam/learning-redirect to enhance discoverability. Or [set up a custom shortcut CLI command](https://github.com/hchiam/learning-bash-scripts/blob/main/gh-cli-create-learning-redirect-repo-from-template.sh))
+**Need to have `python = ">=3.11,<3.12"`**
 
-<!-- Add reference link(s) here -->
+I had to `brew install python@3.11`???
 
-## From scratch
+```sh
+git clone https://github.com/imartinez/privateGPT
 
-Using [`yarn`](https://github.com/hchiam/learning-yarn):
+cd privateGPT
 
-```bash
-yarn add
-```
+python3.11 -m venv .venv
+# or with my alias: py -m venv .venv
 
-Or with `npm`:
+source .venv/bin/activate
 
-```bash
-npm install
-```
+pip install --upgrade pip poetry
 
-And then:
+poetry install --with ui,local
 
-```bash
+./scripts/setup
 
-```
+# Launch the privateGPT API server **and** the gradio UI
+poetry run python3.11 -m private_gpt
 
-## Starting by testing out this repo <!-- Replace "template"s and "# and then ..."s in this section -->
-
-Using [`yarn`](https://github.com/hchiam/learning-yarn): (triple-click to select all)
-
-```bash
-git clone https://github.com/hchiam/learning-template.git && cd learning-template && yarn; # and then ...
-```
-
-Or with `npm`: (triple-click to select all)
-
-```bash
-git clone https://github.com/hchiam/learning-template.git && cd learning-template && npm install; # and then ...
+# In another terminal, create a new browser window on your private GPT!
+open http://127.0.0.1:8001/
 ```
