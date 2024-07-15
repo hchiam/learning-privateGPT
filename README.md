@@ -2,6 +2,8 @@
 
 Just one of the things I'm learning. https://github.com/hchiam/learning
 
+https://github.com/hchiam/learning-ollama
+
 ## July 2024 notes:
 
 https://github.com/zylon-ai/private-gpt (was https://github.com/imartinez/privateGPT)
